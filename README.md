@@ -1,10 +1,10 @@
-# Cisco DNA Center VLAN Range Checker
+# Cisco Catalyst Center VLAN Range Checker
 
-A Python script to query Cisco DNA Center (formerly DNAC) to check if VLANs within a specified range are in use across all monitored network devices.
+A Python script to query Cisco Catalyst Center (formerly DNAC) to check if VLANs within a specified range are in use across all monitored network devices.
 
 ## Features
 
-- 🔐 Secure authentication with Cisco DNA Center
+- 🔐 Secure authentication with Cisco Catalyst Center
 - 📡 Automatic discovery of all monitored network devices
 - 🔍 VLAN range checking across multiple devices
 - 📊 Detailed reporting with device information
@@ -15,7 +15,7 @@ A Python script to query Cisco DNA Center (formerly DNAC) to check if VLANs with
 ## Prerequisites
 
 - Python 3.6 or higher
-- Network access to Cisco DNA Center
+- Network access to Cisco Catalyst Center
 - Valid DNA Center credentials
 
 ## Installation
@@ -74,32 +74,32 @@ chmod +x cisco_sandbox_vlan_checker.py
 
 ### No VLANs Found
 ```
-🚀 Cisco DNA Center Sandbox VLAN Range Checker
+Cisco Catalyst Center Sandbox VLAN Range Checker
 --------------------------------------------------
 Target: https://sandboxdnac.cisco.com
 Range: VLANs 600-699
 
-✅ Successfully authenticated
-📡 Found 4 network devices to check
-✅ Completed checking 4 devices
+Successfully authenticated
+Found 4 network devices to check
+Completed checking 4 devices
 
 ======================================================================
 VLAN RANGE CHECK RESULTS (600-699)
 ======================================================================
 
-✅ No VLANs in the range 600-699 found on any monitored devices.
-🎉 All VLANs in this range are available for use!
+No VLANs in the range 600-699 found on any monitored devices.
+All VLANs in this range are available for use!
 ```
 
 ### VLANs Found
 ```
-🔴 Found VLANs in range 1-20 on the following devices:
+Found VLANs in range 1-20 on the following devices:
 
-📍 sw1 (10.10.20.175)
+sw1 (10.10.20.175)
    • VLAN 1: VLAN1
-   📊 Count: 1 VLANs
+   Count: 1 VLANs
 
-📈 Summary:
+Summary:
    • Devices with VLANs in range: 4
    • Total VLANs found in range: 4
    • Unique VLAN IDs in use: [1]
@@ -124,7 +124,7 @@ TIMEOUT = 30  # seconds
 
 ## API Endpoints Used
 
-The script uses the following Cisco DNA Center REST API endpoints:
+The script uses the following Cisco Catalyst Center REST API endpoints:
 
 - **Authentication**: `POST /dna/system/api/v1/auth/token`
 - **Network Devices**: `GET /dna/intent/api/v1/network-device`
@@ -193,7 +193,7 @@ For production use:
 ## Testing
 
 The script has been tested with:
-- Cisco DNA Center Sandbox
+- Cisco Catalyst Center Sandbox
 - Cisco Catalyst 9000 series switches
 - Python 3.9+
 
@@ -213,7 +213,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For issues and questions:
 - Check the troubleshooting section
-- Review Cisco DNA Center API documentation
+- Review Cisco Catalyst Center API documentation
 - Open an issue in the repository
 
 ## Changelog
